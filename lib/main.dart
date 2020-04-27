@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'SQFlite Demo',
+      title: 'SQFLite Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
