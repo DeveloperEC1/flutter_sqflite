@@ -5,12 +5,6 @@ class Note {
 
   Note(this._name, this._age);
 
-  Note.map(dynamic obj) {
-    this._id = obj['id'];
-    this._name = obj['name'];
-    this._age = obj['age'];
-  }
-
   int get id => _id;
 
   String get name => _name;
