@@ -63,7 +63,7 @@ class _SQFLiteExampleState extends State<SQFLiteExample> {
                             subtitle: Text(
                               '${items[position].age}',
                             ),
-                            onTap: () => _updateNote(position),
+                            onTap: () => _updateNote(items[position]),
                             onLongPress: () =>
                                 _deleteNote(items[position], position),
                           ),
@@ -85,10 +85,10 @@ class _SQFLiteExampleState extends State<SQFLiteExample> {
     });
   }
 
-  void _updateNote(int position) async {
+  void _updateNote(Note note) async {
     db
         .updateNote(
-            Note.fromMap({'id': position + 1, 'name': 'yosi', 'age': 24}))
+            Note.fromMap({'id': note.id, 'name': 'yosi', 'age': 24}))
         .then((notes) {
       setState(() {
         _getItems();
