@@ -107,7 +107,7 @@ class _SQFLiteExampleState extends State<SQFLiteExample> {
   void _deleteData() async {
     db.deleteData().then((notes) {
       setState(() {
-        _getItems();
+        items.clear();
       });
     });
   }
